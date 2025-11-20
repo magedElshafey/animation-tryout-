@@ -4,7 +4,6 @@ import App from "./App.tsx";
 import { QueryClientProvider } from "@tanstack/react-query";
 import queryClient from "./services/api/queryClient.ts";
 import { BrowserRouter as Router } from "react-router-dom";
-import AuthProvider from "./store/AuthProvider.tsx";
 import { HelmetProvider } from "react-helmet-async";
 import AxiosConfig from "./services/api/Axios.ts";
 import LanguageProvider from "./store/LanguageProvider.tsx";
@@ -13,17 +12,15 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 createRoot(document.getElementById("root")!).render(
   <Router>
-    <AuthProvider>
-      <HelmetProvider>
-        <QueryClientProvider client={queryClient}>
-          <LanguageProvider>
-            <AxiosConfig />
-            <ToastContainer />
-            <App />
-          </LanguageProvider>
-          <ScrollToTop />
-        </QueryClientProvider>
-      </HelmetProvider>
-    </AuthProvider>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <LanguageProvider>
+          <AxiosConfig />
+          <ToastContainer />
+          <App />
+        </LanguageProvider>
+        <ScrollToTop />
+      </QueryClientProvider>
+    </HelmetProvider>
   </Router>
 );

@@ -1,6 +1,6 @@
 import Navbar from "./layout/Navbar";
 import Footer from "./layout/Footer";
-import useLocalizeDocumentAttributes from "./hooks/common/ui/useLocalizeDocumentAttributes";
+import useLocalizeDocumentAttributes from "./hooks/ui/useLocalizeDocumentAttributes";
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/common/loader/spinner/Loader";

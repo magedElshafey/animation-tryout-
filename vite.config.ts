@@ -2,6 +2,8 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import viteCompression from "vite-plugin-compression";
 import legacy from "@vitejs/plugin-legacy";
+import path from "path";
+
 export default defineConfig({
   plugins: [
     react(),
@@ -42,5 +44,12 @@ export default defineConfig({
       treeshake: true,
     },
     chunkSizeWarningLimit: 1000,
+  },
+  server: {
+    port: 3000,
+  },
+
+  resolve: {
+    alias: { "@": path.resolve(__dirname, "./src") },
   },
 });
