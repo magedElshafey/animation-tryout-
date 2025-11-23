@@ -1,3 +1,4 @@
+import AboutSection from "@/components/common/aboutSection/AboutSection";
 import CartTableSkeleton from "../../components/common/loader/skeltons/CartTableSkeleton";
 import CategorySkelton from "../../components/common/loader/skeltons/CategorySkelton";
 import ContactInfoSkeleton from "../../components/common/loader/skeltons/ContactInfoSkeleton";
@@ -13,7 +14,7 @@ import SliderSkeleton from "../../components/common/loader/skeltons/SliderSkelto
 const HomePage = () => {
   return (
     <div>
-      <SliderSkeleton />
+      {/* <SliderSkeleton />
       <ProductSkelton />
       <CategorySkelton />
       <FullImageSkeleton />
@@ -33,7 +34,8 @@ const HomePage = () => {
       </div>
       <div className="my-4">
         <CartTableSkeleton />
-      </div>
+      </div> */}
+      <AboutSection />
     </div>
   );
 };
