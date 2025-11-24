@@ -1,10 +1,8 @@
 import Navbar from "./layout/Navbar";
-import Footer from "./layout/Footer";
 import useLocalizeDocumentAttributes from "./hooks/ui/useLocalizeDocumentAttributes";
 import { Suspense, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
 import Loader from "./components/common/loader/spinner/Loader";
-import FixedBtn from "./components/common/buttons/FixedBtn";
 import Hero from "./layout/Hero";
 const Home = lazy(() => import("./app/home/page"));
 const About = lazy(() => import("./app/about/page"));
@@ -23,7 +21,6 @@ const App = () => {
           </div>
         }
       >
-        <FixedBtn />
         <Navbar />
         <Hero />
         <div className="main">

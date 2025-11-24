@@ -3,6 +3,7 @@ import { NavbarLink } from "@/types/navbar";
 import { Link } from "react-router-dom";
 import MainBtn from "@/components/common/buttons/MainBtn";
 import { GiButterfly } from "react-icons/gi";
+import { useLanguage } from "@/store/LanguageProvider";
 
 interface MegaMenuProps {
   item: NavbarLink;
@@ -11,6 +12,7 @@ interface MegaMenuProps {
 }
 
 const MegaMenu = ({ item, isOpen, onClose }: MegaMenuProps) => {
+  const { language } = useLanguage();
   if (!item.list) return null;
 
   return (
@@ -44,7 +46,13 @@ const MegaMenu = ({ item, isOpen, onClose }: MegaMenuProps) => {
                     size={20}
                     className="opacity-0 duration-300 transition-all group-hover:opacity-100"
                   />
-                  <span className=" duration-300 transition-all group-hover:-translate-x-2">
+                  <span
+                    className={`duration-300 transition-all  ${
+                      language === "ar"
+                        ? "group-hover:-translate-x-2"
+                        : "group-hover:translate-x-2"
+                    }`}
+                  >
                     {link.title}
                   </span>
                 </Link>

@@ -1,6 +1,8 @@
-import { GoArrowRight } from "react-icons/go";
-
+import { GoArrowRight, GoArrowLeft } from "react-icons/go";
+import { Link } from "react-router-dom";
+import { useLanguage } from "@/store/LanguageProvider";
 const AboutSection = () => {
+  const { language } = useLanguage();
   return (
     <>
       <section className="relative flex flex-col bg-[#FAFAFA]">
@@ -28,35 +30,42 @@ const AboutSection = () => {
               that elevate connectivity and enhance quality of life across the
               Kingdom.
             </p>
-            <div className="btns flex justify-start items-center mt-5 gap-1 group">
-              <button className="w-14 h-14 rounded-full bg-[#006450] text-white text-3xl transition-transform duration-1000 group-hover:translate-x-64">
-                <GoArrowRight className="ml-3" />
-              </button>
+            <Link
+              to="/about-us"
+              className="btns flex justify-start items-center mt-5 gap-2 group"
+            >
+              <span
+                className={`w-14 h-14 flex items-center justify-center rounded-full bg-[#006450] text-white text-3xl transition-transform duration-1000 ${
+                  language === "ar"
+                    ? "group-hover:-translate-x-64"
+                    : "group-hover:translate-x-64"
+                }`}
+              >
+                {language === "ar" ? <GoArrowLeft /> : <GoArrowRight />}
+              </span>
 
-              <button className="w-48 h-14 rounded-full bg-[#006450] text-white uppercase text-lg">
+              <span className="w-48 h-14 flex items-center justify-center rounded-full bg-[#006450] text-white uppercase text-lg">
                 Learn More
-              </button>
-            </div>
+              </span>
+            </Link>
           </div>
         </div>
 
         <div className="flex justify-center items-center w-full">
-            <h1
-              className="hidden md:block top-20 left-5 md:left-[30%] text-4xl md:text-7xl lg:text-[5rem] xl:text-8xl font-light leading-tight  z-40 mix-blend-exclusion text-white"
-            >
-              The Leading
-              <br />
-              Multi-asset
-              <br />
-              Class Real-estate
-              <br />
-              Developer
-            </h1>
+          <h1 className="hidden md:block top-20 left-5 md:left-[30%] text-4xl md:text-7xl lg:text-[5rem] xl:text-8xl font-light leading-tight  z-40 mix-blend-exclusion text-white">
+            The Leading
+            <br />
+            Multi-asset
+            <br />
+            Class Real-estate
+            <br />
+            Developer
+          </h1>
 
-            <h1 className="block md:hidden absolute top-20 left-5 text-4xl font-light leading-tight">
-              The Leading Multi-asset <br />
-              Class Real-estate Developer
-            </h1>
+          <h1 className="block md:hidden absolute top-20 left-5 text-4xl font-light leading-tight">
+            The Leading Multi-asset <br />
+            Class Real-estate Developer
+          </h1>
         </div>
       </section>
     </>

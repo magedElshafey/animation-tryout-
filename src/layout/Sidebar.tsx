@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Backdrop from "./Backdrop";
 import { navbarLinks } from "@/data/data";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MainBtn from "@/components/common/buttons/MainBtn";
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
@@ -26,13 +27,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         aria-label="Sidebar Navigation"
       >
         <nav aria-label="Main Navigation" className="mt-2 px-4">
-          <ul className="flex flex-col">
+          <ul className="flex flex-col px-4">
             {navbarLinks.map((item, idx) => (
               <li key={idx}>
                 <Link
                   onClick={onClose}
                   to={item.title}
-                  className="block text-lg font-medium text-transition py-2 border-b ms-2"
+                  className="block text-lg font-medium text-transition mb-4"
                 >
                   {t(item.title)}
                 </Link>
@@ -40,6 +41,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             ))}
             <li className="py-2 border-b ms-2">
               <LanguageSwitcher />
+            </li>
+            <li>
+              <MainBtn
+                onClick={() => onClose()}
+                text="register your interest"
+                className="bg-green-700 text-white !px-4 w-fit"
+              />
             </li>
           </ul>
         </nav>

@@ -33,11 +33,10 @@ const Navbar = () => {
     <>
       <header className="relative z-50">
         <nav
-          className={`fixed top-4 left-4 right-4 md:left-6 md:right-6 lg:left-8 lg:right-8 xl:left-10 xl:right-10 2xl:left-12 2xl:right-12 py-5 px-6 rounded-full bg-gradient-to-r from-[#f0f0f025] via-[#dcdcdc35] to-[#f0f0f025] backdrop-blur-xl border border-white/20 shadow-lg transition-all duration-500 ease-in-out ${
-            showNavbar
-              ? "translate-y-0 opacity-100"
-              : "-translate-y-32 opacity-0"
-          } flex items-center justify-between`}
+          className={`fixed top-4 left-4 right-4 md:left-6 md:right-6 lg:left-8 lg:right-8 xl:left-10 xl:right-10 2xl:left-12 2xl:right-12 py-5 px-6 rounded-full bg-gradient-to-r from-[#ffffff80] via-[#f5f5f580] to-[#ffffff80]
+ backdrop-blur-xl border text-gray-800 border-white/20 shadow-lg transition-all duration-500 ease-in-out ${
+   showNavbar ? "translate-y-0 opacity-100" : "-translate-y-32 opacity-0"
+ } flex items-center justify-between`}
         >
           {/* Left */}
           <div className="flex items-center gap-6 lg:gap-8 xl:gap-10">
@@ -74,7 +73,9 @@ const Navbar = () => {
 
           {/* Right */}
           <div className="flex items-center gap-4">
-            <MainBtn text="register your interest" />
+            <div className="hidden lg:block">
+              <MainBtn text="register your interest" />
+            </div>
             <SidebarIcon openSidebar={() => setIsSidebarOpen(true)} />
           </div>
         </nav>

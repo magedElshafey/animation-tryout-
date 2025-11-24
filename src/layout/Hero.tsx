@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
           </div>
         </motion.div>
       </div>
-      <div className="px-6 md:px-12 flex items-center justify-between">
+      <div className="px-6 md:px-12 pb-7 flex flex-col gap-4 md:flex-row items-center justify-between">
         <div className="relative w-full max-w-md overflow-hidden rounded-3xl bg-slate-900/40 aspect-[4/3]">
           <div className="h-full w-full bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.1),_rgba(0,0,0,0.8))]" />
 
