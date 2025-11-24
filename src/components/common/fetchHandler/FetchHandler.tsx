@@ -1,10 +1,9 @@
-import Skeleton from "@/common/components/loader/skeltons/Skeleton";
-import Loader from "@/common/components/loader/spinner/Loader";
 import { useTranslation } from "react-i18next";
 import { SkeletonType } from "../../../types/SkeltonType";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { FiRefreshCcw } from "react-icons/fi";
-
+import Skeleton from "../loader/skeltons/Skeleton";
+import Loader from "../loader/spinner/Loader";
 interface FetchHandlerProps {
   children: React.ReactNode;
   queryResult: any;

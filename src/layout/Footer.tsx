@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { navLinks } from "../data/data";
-import { Link } from "react-router-dom";
+// import { navLinks } from "../data/data";
+// import { Link } from "react-router-dom";
 import { socials } from "../data/data";
 const Footer = () => {
   const { t } = useTranslation();
@@ -15,7 +15,7 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="mb-3">{t("links")}</h4>
-            <ul>
+            {/* <ul>
               {navLinks?.map((item, index) => (
                 <li key={index} className="mb-2">
                   <Link to={item?.link} className="duration-300">
@@ -23,7 +23,7 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
+            </ul> */}
           </div>
           <div>
             <h4 className="mb-3">{t("contact us")}</h4>

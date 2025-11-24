@@ -1,4 +1,3 @@
-import { Nav } from "../types/Nav";
 import { Socials } from "../types/Socials";
 import {
   FaFacebook,
@@ -9,23 +8,63 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+export interface NavbarLinks {
+  title: string;
+  list?: {
+    description: string;
+    links: {
+      title: string;
+      list?: string[];
+    }[];
+  };
+}
 
-export const navLinks: Nav[] = [
+import { NavbarLink } from "@/types/navbar";
+
+export const navbarLinks: NavbarLink[] = [
+  { title: "news" },
+  { title: "csr" },
+  { title: "roshen care" },
   {
-    name: "Home",
-    link: "/",
+    title: "we are roshen",
+    list: {
+      description:
+        "ROSHN Group is Saudi Arabia's leading multi-asset class real estate developer and a Public Investment Fund (PIF) company...",
+      links: [
+        { title: "leadership" },
+        { title: "the brand story" },
+        { title: "vision 2030" },
+        { title: "our awards" },
+        { title: "sponsorships" },
+      ],
+    },
   },
   {
-    name: "About",
-    link: "/about",
+    title: "Communities",
+    list: {
+      description:
+        "Our residential communities are distinguished by their vibrant and fully integrated design...",
+      links: [
+        { title: "sedra", list: ["the garden collection"] },
+        { title: "alarous" },
+        { title: "warefa" },
+        { title: "elmanar" },
+        { title: "aldanah" },
+      ],
+    },
   },
   {
-    name: "Contact",
-    link: "/contact",
-  },
-  {
-    name: "services",
-    link: "/services",
+    title: "by roshen group",
+    list: {
+      description:
+        "As a national champion of destination real estate, ROSHN Group is redefining urban landscapes...",
+      links: [
+        { title: "marafy" },
+        { title: "roshen front" },
+        { title: "roshen stadium" },
+        { title: "roshen next" },
+      ],
+    },
   },
 ];
 
