@@ -17,10 +17,10 @@
 }
 
 body {
-  overflow-x: hidden;
-  /* text-transform: capitalize; */
-  /* font-family: "Poppins", sans-serif; */
-  font-family: "IBM Plex Sans Arabic", sans-serif;
+    overflow-x: hidden !important;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 html {
@@ -121,5 +121,32 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+button {
+    text-transform: capitalize !important;
+}
+
+/* ============== mega menu animation classes=========== */
+.mega-enter {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.mega-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 250ms ease, transform 250ms ease;
+}
+
+.mega-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.mega-exit-active {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 200ms ease, transform 200ms ease;
 }
