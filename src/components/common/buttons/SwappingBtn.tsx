@@ -14,10 +14,10 @@ const SwappingBtn: React.FC<SwappingBtnProps> = ({ btnTitle, link }) => {
     <>
       <Link
         to={`/${link}`}
-        className="btns flex justify-start items-center mt-5 gap-2 group"
+        className="btns flex justify-start items-center gap-2 group"
       >
         <span
-          className={`w-14 h-14 flex items-center justify-center rounded-full bg-[#006450] text-white text-3xl transition-transform duration-1000 ${
+          className={`hidden w-14 h-14 lg:flex items-center justify-center rounded-full bg-[#006450] text-white text-3xl transition-transform duration-1000 ${
             language === "ar"
               ? "mr-5 group-hover:-translate-x-64"
               : "group-hover:translate-x-64"

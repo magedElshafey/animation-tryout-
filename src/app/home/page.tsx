@@ -11,12 +11,14 @@ import ProductDetailsSkeleton from "../../components/common/loader/skeltons/Prod
 import ProductSkelton from "../../components/common/loader/skeltons/ProductSkelton";
 import SliderSkeleton from "../../components/common/loader/skeltons/SliderSkelton";
 import AreaOfInterest from "@/components/common/areaOfInterest/AreaOfInterest";
+import NewsSection from "@/components/common/newsSection/NewsSection";
 
 const HomePage = () => {
   return (
     <>
       <AboutSection />
       <AreaOfInterest />
+      <NewsSection />
     </>
   );
 };

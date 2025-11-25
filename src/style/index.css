@@ -150,3 +150,12 @@ button {
   transform: translateY(-10px);
   transition: opacity 200ms ease, transform 200ms ease;
 }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
