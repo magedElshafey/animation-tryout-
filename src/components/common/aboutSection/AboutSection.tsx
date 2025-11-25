@@ -1,10 +1,5 @@
-import { GoArrowRight, GoArrowLeft } from "react-icons/go";
-import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useLanguage } from "@/store/LanguageProvider";
+import { GoArrowRight } from "react-icons/go";
 const AboutSection = () => {
-  const [isHoverd, setIsHoverd] = useState(false);
-  const { language } = useLanguage();
   return (
     <>
       <section className="relative flex flex-col bg-[#FAFAFA]">
@@ -103,27 +98,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
-{
-  /* <a
-              href="#"
-              className="flex items-center gap-1  mt-5 transition-all duration-500 w-fit"
-              onMouseEnter={() => setIsHoverd(true)}
-              onMouseLeave={() => setIsHoverd(false)}
-            >
-              <button
-                className={`w-14 h-14 rounded-full bg-[#006450] text-white text-3xl ${
-                  isHoverd ? "order-2" : "order-1"
-                }`}
-              >
-                <GoArrowRight className="ml-3" />
-              </button>
-              <span
-                className={`w-48 h-14 rounded-full bg-[#006450] text-white uppercase text-lg text-center leading-[3.5rem] ${
-                  isHoverd ? "order-1" : "order-2"
-                }`}
-              >
-                Learn More
-              </span>
-            </a> */
-}

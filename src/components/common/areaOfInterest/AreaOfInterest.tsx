@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { GoArrowRight } from "react-icons/go";
+import { useState } from "react";
 import InterestBlock from "./InterestBlock";
 import PanelContent from "./PanelContent";
 import "../../../style/index.css";
