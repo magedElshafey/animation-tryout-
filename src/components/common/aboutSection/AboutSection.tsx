@@ -50,24 +50,22 @@ const AboutSection = () => {
               that elevate connectivity and enhance quality of life across the
               Kingdom.
             </p>
-            <Link
-              to="/about-us"
-              className="btns flex justify-start items-center mt-5 gap-2 group"
-            >
-              <span
-                className={`w-14 h-14 flex items-center justify-center rounded-full bg-[#006450] text-white text-3xl transition-transform duration-1000 ${
-                  language === "ar"
-                    ? "group-hover:-translate-x-64"
-                    : "group-hover:translate-x-64"
-                }`}
-              >
-                {language === "ar" ? <GoArrowLeft /> : <GoArrowRight />}
-              </span>
 
-              <span className="w-48 h-14 flex items-center justify-center rounded-full bg-[#006450] text-white uppercase text-lg">
+            <div className="btns group mt-5 flex w-fit items-center gap-1">
+              <button
+                className="
+                h-14 w-14 rounded-full bg-[#006450] text-3xl text-white
+                transition-transform duration-500 
+                group-hover:translate-x-64
+              "
+              >
+                <GoArrowRight className="ml-3" />
+              </button>
+
+              <button className="h-14 w-48 rounded-full bg-[#006450] text-lg uppercase text-white">
                 Learn More
-              </span>
-            </Link>
+              </button>
+            </div>
           </div>
         </div>
 

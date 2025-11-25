@@ -17,10 +17,10 @@
 }
 
 body {
-    overflow-x: hidden !important;
-    text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
-    font-family: "IBM Plex Sans Arabic", sans-serif;
+  overflow-x: hidden !important;
+  /* text-transform: capitalize; */
+  font-family: "Poppins", sans-serif;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 html {
@@ -121,32 +121,56 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input[type="number"] {
-    -moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 button {
-    text-transform: capitalize !important;
+  /* text-transform: capitalize !important; */
 }
 
 /* ============== mega menu animation classes=========== */
 .mega-enter {
-    opacity: 0;
-    transform: translateY(-10px);
+  opacity: 0;
+  transform: translateY(-10px);
 }
 
 .mega-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 250ms ease, transform 250ms ease;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 250ms ease, transform 250ms ease;
 }
 
 .mega-exit {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .mega-exit-active {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 200ms ease, transform 200ms ease;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+/* العنصر يدخل من الشمال */
+.slide-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-in-active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* العنصر يخرج لليمين */
+.slide-out {
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.slide-out-active {
+  transform: translateX(100%);
+  opacity: 0;
 }
