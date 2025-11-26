@@ -63,11 +63,7 @@ const NewsSection = () => {
         }`}
       >
         {/* Title Section */}
-        <div
-          className={`title flex flex-col md:flex-row justify-between items-start gap-5 ${
-            language === "ar" ? "pr-10 md:pr-0" : "pl-10 md:pl-0"
-          }`}
-        >
+        <div className="title flex flex-col md:flex-row justify-between items-start gap-5 px-10">
           <h2 className="text-left text-xl lg:text-2xl font-light uppercase">
             What's New
           </h2>
